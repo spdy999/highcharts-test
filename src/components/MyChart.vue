@@ -4,7 +4,8 @@
       <p>Set the chart title here:</p>
       <input type="text" v-model="title">
     </div>
-    <highcharts :options="chartOptions"></highcharts>
+    <!-- <highcharts :options="chartOptions"></highcharts> -->
+    <highcharts :constructor-type="'stockChart'" :options="chartOptions"></highcharts>
   </div>
 </template>
 

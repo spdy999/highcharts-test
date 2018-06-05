@@ -4,9 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import HighchartsVue from 'highcharts-vue'
+import stockInit from 'highcharts/modules/stock'
+import Highcharts from 'highcharts'
 
 Vue.config.productionTip = false
 Vue.use(HighchartsVue)
+stockInit(Highcharts)
 
 /* eslint-disable no-new */
 new Vue({
