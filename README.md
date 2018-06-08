@@ -1,4 +1,4 @@
-# leaflet
+# highcharts-test
 
 > A Vue.js project
 
