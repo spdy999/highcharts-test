@@ -1,11 +1,6 @@
 <template>
-  <div id="mychart">
-    <div class="title-row">
-      <p>Set the chart title here:</p>
-      <input type="text" v-model="title">
-    </div>
-    <!-- <highcharts :options="chartOptions"></highcharts> -->
-    <highcharts :constructor-type="'stockChart'" :options="chartOptions"></highcharts>
+  <div id="mymap">
+    <h1>Map Test</h1>
   </div>
 </template>
 
@@ -13,7 +8,7 @@
 import { Chart } from 'highcharts-vue'
 
 export default {
-  name: 'mychart',
+  name: 'mymap',
   components: {
     highcharts: Chart
   },
@@ -33,26 +28,8 @@ export default {
       title: ''
     }
   },
-  watch: {
-    title(newValue) {
-      if (newValue === '') {
-        this.chartOptions.title.text = 'Entire title'
-      } else {
-      	this.chartOptions.title.text = newValue
-      }
-
-    }
-  }
-
 };
 </script>
 
 <style>
-.title-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #eee;
-  padding: 20px;
-}
 </style>
