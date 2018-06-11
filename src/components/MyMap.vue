@@ -1,6 +1,5 @@
 <template>
   <highcharts :constructor-type="'mapChart'" :options="mapOptions" class="map"></highcharts>
-  <!-- <highmaps :options="mapOptions"></highmaps> -->
 </template>
 
 <script>
