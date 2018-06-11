@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import MyChart from '@/components/MyChart'
 import MyMap from '@/components/MyMap'
 import MapEurope from '@/components/MapEurope'
+import MapThai from '@/components/MapThai'
 
 Vue.use(Router)
 
@@ -13,6 +14,11 @@ export default new Router({
       path: '/helloworld',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/mapthai',
+      name: 'MapThai',
+      component: MapThai
     },
     {
       path: '/mapeurope',
