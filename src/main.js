@@ -8,15 +8,15 @@ import Highcharts from 'highcharts'
 import HighMaps from '../node_modules/highcharts/highmaps.js'
 import stockInit from 'highcharts/modules/stock'
 import mapInit from 'highcharts/modules/map'
-// import addWorldMap from './js/worldmap'
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
 
 Vue.config.productionTip = false
+Vue.use(Vuetify)
 stockInit(Highcharts)
 mapInit(Highcharts)
-// addWorldMap(Highcharts)
 Vue.use(VueHighcharts,  { Highcharts })
 Vue.use(HighMaps)
-/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
