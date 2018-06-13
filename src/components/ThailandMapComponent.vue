@@ -6,6 +6,7 @@
 import geojson from '../js/th-all.geo.json';
 
 export default {
+  name: 'ThailandMapComponent',
   data() {
     return {
       mapOptions: {

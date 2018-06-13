@@ -1,16 +1,14 @@
 <template>
   <div id="mychart">
     <div class="title-row">
-      <p>Set the chart title here:</p>
-      <input type="text" v-model="title">
+      <p>High Chart</p>
     </div>
-    <!-- <highcharts :options="chartOptions"></highcharts> -->
-    <highcharts :constructor-type="'stockChart'" :options="chartOptions"></highcharts>
+    <highcharts :options="chartOptions"></highcharts>
   </div>
 </template>
 
 <script>
-import { Chart } from 'highcharts-vue'
+import { Chart } from 'highcharts-vue';
 
 export default {
   name: 'mychart',
@@ -24,26 +22,16 @@ export default {
           type: 'spline'
         },
         title: {
-          text: 'Entire title'
+          text: 'Title'
         },
-        series: [{
-          data: [10, 0, 8, 2, 6, 4, 5, 5]
-        }]
-      },
-      title: ''
-    }
-  },
-  watch: {
-    title(newValue) {
-      if (newValue === '') {
-        this.chartOptions.title.text = 'Entire title'
-      } else {
-      	this.chartOptions.title.text = newValue
+        series: [
+          {
+            data: [10, 0, 8, 2, 6, 4, 5, 5]
+          }
+        ]
       }
-
-    }
+    };
   }
-
 };
 </script>
 
